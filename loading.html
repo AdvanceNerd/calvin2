@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Loading{
+            width:80px;
+            height:80px;
+            border:7px solid gray;
+            border-radius:50%;
+            border-top:7px solid white;
+            overflow:hidden;
+            animation:hi 1.9s linear 4s infinite;
+            margin:auto
+        }
+        @keyframes hi{
+            0% {transform:rotate(0deg);}
+            100% {transform:rotate(360deg);}
+        }
+        p{
+            font-weight:bold;
+            margin:auto;
+            font-size:30px;
+            text-align:center;
+            color:white;
+            animation: colorr 3.5s ease-out 0.3s;
+        }
+        @keyframes colorr{
+            0% {text-shadow: -3px 0px cyan;}
+            15% {text-shadow: -3px 0px cyan, 3px 0px red;}
+            25% {text-shadow: -2px 1px 0px cyan, 3px -3px 0px red;}
+            35% {text-shadow: -3px 3.5px 0px cyan, 3px 2.5px 0px red;}
+            55% {text-shadow: -3px -2.5px 0px cyan, 3px 1px 0px red;}
+            75% {text-shadow: -3px 4px cyan, 3px 2px 0px red;}
+            85% {text-shadow: -2px 2px cyan, 2px -2.5px 0px red;}
+            95% {text-shadow: -2px 1px cyan, 2px 1px 0px red;}
+            100% {text-shadow:none;}
+        }
+        
+        body{
+            background-color:white;
+            display:flex;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            animation: changecolor 2.5s ease-in forwards;
+        }
+        @keyframes changecolor{
+            0% {background-color:white;}
+            100% {background-color:black;}
+        }
+        p:hover{
+            transition: all 1s ease-out;
+            text-shadow:-3px 0px cyan, 3px 0px red;
+            -webkit-transition: text-shadow 1s;
+        }
+        .Loading:hover{
+            transition: all 1.9s ease-in-out;
+            border: 7px dashed powderblue;
+            -webkit-transition: border-color 2s;
+        }
+        main{
+            animation: gone 3s ease-in-out 3s forwards;
+        }
+        @keyframes gone{
+            0% {color:white;}
+            100% {color:black;}
+        }
+        header{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            overflow:hidden;
+            justify-content:center;
+            align-items:center;
+        }
+        </style>
+        </head>
+        <body>
+        <header>
+        <p>Loading...</p><br>
+        <div class="Loading"></div>
+        </header>
+        <main style="position:absolute;bottom:5px;right:5px;color:white;font-family:serif;">By Calvin_Chd</main>
+        </body>
+        </html>
